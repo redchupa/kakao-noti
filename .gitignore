@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Memory / local notes (Claude)
+.claude/
+memory/
+
+# Test/dev artefacts
+.pytest_cache/
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Local config
+.env
+.env.local
+*.secret

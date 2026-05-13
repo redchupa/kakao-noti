@@ -1,0 +1,7 @@
+{
+  "name": "Kakao Talk (Self Memo) Notify",
+  "content_in_root": false,
+  "render_readme": true,
+  "country": ["KR"],
+  "homeassistant": "2024.4.0"
+}

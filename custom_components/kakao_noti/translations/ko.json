@@ -1,0 +1,29 @@
+{
+  "config": {
+    "step": {
+      "pick_implementation": {
+        "title": "카카오 자격증명 선택"
+      },
+      "auth": {
+        "title": "카카오 계정 연결"
+      }
+    },
+    "abort": {
+      "already_configured": "카카오 알림이 이미 등록되어 있습니다.",
+      "missing_configuration": "먼저 설정 → 기기 및 서비스 → 'Application Credentials'에서 자격증명을 추가하세요.",
+      "authorize_url_timeout": "인증 URL 생성 중 타임아웃",
+      "no_url_available": "브라우저에서 접근 가능한 HA URL 없음",
+      "oauth_error": "카카오에서 OAuth 에러 반환",
+      "oauth_failed": "OAuth 흐름 실패",
+      "oauth_timeout": "OAuth 흐름 타임아웃",
+      "oauth_unauthorized": "권한 없음 — client_id / client_secret 확인",
+      "user_rejected_authorize": "사용자가 동의를 거부함"
+    },
+    "create_entry": {
+      "default": "카카오 인증 완료. notify.kakao_noti 서비스를 사용할 수 있습니다."
+    }
+  },
+  "application_credentials": {
+    "description": "HA가 카카오 '나에게 보내기' 메시지를 보낼 수 있도록 인증합니다.\n\n1. [카카오 디벨로퍼스]({more_info_url})에서 앱 생성\n2. **플랫폼 키 → REST API 키** 편집 페이지에서 클라이언트 시크릿(카카오 로그인) 생성 + 활성화 ON\n3. 같은 페이지에 Redirect URI 등록: `https://my.home-assistant.io/redirect/oauth`\n4. **제품 설정 → 카카오 로그인** 활성화 + **talk_message** 동의항목 사용함\n5. 아래에 REST API 키(client_id)와 클라이언트 시크릿을 입력하세요."
+  }
+}

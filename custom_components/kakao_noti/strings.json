@@ -1,0 +1,29 @@
+{
+  "config": {
+    "step": {
+      "pick_implementation": {
+        "title": "Pick Kakao authentication"
+      },
+      "auth": {
+        "title": "Link Kakao account"
+      }
+    },
+    "abort": {
+      "already_configured": "Kakao Notify is already configured.",
+      "missing_configuration": "Add credentials via Settings → Devices & services → Application Credentials.",
+      "authorize_url_timeout": "Timeout while preparing the authorize URL.",
+      "no_url_available": "No HA URL is reachable from the browser.",
+      "oauth_error": "OAuth error returned from Kakao.",
+      "oauth_failed": "OAuth flow failed.",
+      "oauth_timeout": "OAuth flow timed out.",
+      "oauth_unauthorized": "Unauthorized — check client ID / secret.",
+      "user_rejected_authorize": "User declined the authorization."
+    },
+    "create_entry": {
+      "default": "Successfully authenticated with Kakao. The notify.kakao_noti service is now available."
+    }
+  },
+  "application_credentials": {
+    "description": "Authorize Home Assistant to send Kakao 'self memo' messages.\n\n1. Register an app at [Kakao Developers]({more_info_url}).\n2. In **Platform Keys → REST API Key** edit page: generate a Client Secret (Kakao Login) and toggle Activated → ON.\n3. On the same page register Redirect URI: `https://my.home-assistant.io/redirect/oauth`\n4. In **Product → Kakao Login** turn it ON and enable the **talk_message** consent item.\n5. Paste the REST API Key (client_id) and the Client Secret below."
+  }
+}
