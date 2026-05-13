@@ -60,7 +60,7 @@ data:
 
 | | |
 |---|---|
-| **Home Assistant** | 이 통합이 동작할 곳. 아직 없으시면 [HA 공식 설치 가이드](https://www.home-assistant.io/installation/) (Raspberry Pi / Docker / NUC 등 옵션별)<br/>한국어 안내(영상): [코딩테커 — Home Assistant 입문](https://www.youtube.com/results?search_query=홈어시스턴트+설치+가이드)<br/>버전 확인: **설정 → 정보** → **2024.4 이상** 필요 |
+| **Home Assistant** | 이 통합이 동작할 곳. 아직 없으시면 → ▶ **[Home Assistant 입문 가이드 (한국어, 블로그)](https://redchupa.com/entry/%ed%99%88%ec%96%b4%ec%8b%9c%ec%8a%a4%ed%84%b4%ed%8a%b8ha-%ec%9e%85%eb%ac%b8-%ea%b0%80%ec%9d%b4%eb%93%9c/)** ← 설치부터 첫 자동화까지 단계별 한국어 안내<br/>영문/공식: [HA 공식 설치 가이드](https://www.home-assistant.io/installation/) (Raspberry Pi / Docker / NUC 옵션별)<br/>버전 확인: **설정 → 정보** → **2024.4 이상** 필요 |
 | **HACS** (Home Assistant Community Store) | 커뮤니티 통합 설치 도구. 공식 설치 가이드: <https://www.hacs.xyz/docs/use/download/download/> |
 | **외부 HTTPS 주소** ⚠️ | 카카오가 로그인 결과를 HA로 보낼 때 필요. 아래 참고 |
 | **본인 카카오 계정** | 메시지 받을 카카오톡 계정. 카카오 디벨로퍼스도 같은 계정으로 가입 |
