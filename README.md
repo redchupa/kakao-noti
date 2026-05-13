@@ -26,6 +26,12 @@
   <img src="https://img.shields.io/badge/Made%20for-Home%20Assistant-41BDF5?logo=home-assistant&logoColor=white" alt="Made for HA">
 </p>
 
+<p align="center">
+  <b>🌐 Language:</b>
+  <b>🇰🇷 한국어</b> ·
+  <a href="README.en.md">🇬🇧 English</a>
+</p>
+
 # 카카오톡 나에게 보내기 — Home Assistant 알림
 
 Home Assistant에서 자동화·스크립트가 작동하면 **내 카카오톡 "나와의 채팅"** 으로 메시지가 도착하게 만드는 통합입니다.
