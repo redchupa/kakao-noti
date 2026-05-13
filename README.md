@@ -3,9 +3,27 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/redchupa/kakao-noti/releases/latest"><img src="https://img.shields.io/github/v/release/redchupa/kakao-noti?include_prereleases&label=release&color=brightgreen" alt="Release"></a>
   <a href="https://github.com/hacs/integration"><img src="https://img.shields.io/badge/HACS-Custom-41BDF5.svg" alt="HACS"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/redchupa/kakao-noti" alt="License"></a>
-  <a href="https://github.com/redchupa/kakao-noti/stargazers"><img src="https://img.shields.io/github/stars/redchupa/kakao-noti?style=social" alt="Stars"></a>
+  <img src="https://img.shields.io/badge/Home%20Assistant-2024.4%2B-blue?logo=home-assistant&logoColor=white" alt="HA Version">
+  <img src="https://img.shields.io/badge/KakaoTalk-나에게_보내기-FEE500?logo=kakaotalk&logoColor=black" alt="KakaoTalk">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/redchupa/kakao-noti?color=lightgrey" alt="License"></a>
+  <img src="https://img.shields.io/badge/lang-한국어-red.svg" alt="Korean">
+</p>
+
+<p align="center">
+  <a href="https://github.com/redchupa/kakao-noti/stargazers"><img src="https://img.shields.io/github/stars/redchupa/kakao-noti?style=for-the-badge&logo=github&color=yellow" alt="Stars"></a>
+  <a href="https://github.com/redchupa/kakao-noti/network/members"><img src="https://img.shields.io/github/forks/redchupa/kakao-noti?style=for-the-badge&logo=github&color=blue" alt="Forks"></a>
+  <a href="https://github.com/redchupa/kakao-noti/issues"><img src="https://img.shields.io/github/issues/redchupa/kakao-noti?style=for-the-badge&logo=github&color=orange" alt="Issues"></a>
+  <a href="https://github.com/redchupa/kakao-noti/commits/main"><img src="https://img.shields.io/github/last-commit/redchupa/kakao-noti?style=for-the-badge&logo=github&color=brightgreen" alt="Last commit"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/repo-size/redchupa/kakao-noti?color=informational&label=repo%20size" alt="Repo size">
+  <img src="https://img.shields.io/github/languages/top/redchupa/kakao-noti?color=blueviolet" alt="Top language">
+  <img src="https://img.shields.io/maintenance/yes/2026?color=success" alt="Maintained">
+  <img src="https://img.shields.io/badge/Made%20with-Python-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Made%20for-Home%20Assistant-41BDF5?logo=home-assistant&logoColor=white" alt="Made for HA">
 </p>
 
 # 카카오톡 나에게 보내기 — Home Assistant 알림
