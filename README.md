@@ -670,10 +670,26 @@ A. HACS → 통합 → "Send to myself on KakaoTalk Notify" 카드에 새 버전
 
 ---
 
+## ⭐ 별 한 번 부탁드려요
+
+이 통합이 도움이 됐다면 GitHub 저장소에 별을 눌러주세요. **HACS 설치 단계와는 별개 작업**입니다.
+
+### 별 누르는 방법
+
+1. <https://github.com/redchupa/kakao-noti> 접속 (이미 HACS에 등록한 저장소 URL)
+2. **GitHub 로그인** (계정 없으면 무료 가입: <https://github.com/signup> · HACS 사용 중이면 이미 있는 그 계정)
+3. 페이지 **우상단** 의 **☆ Star** 버튼 클릭 → **★ Starred** 로 변하면 완료
+4. 옆에 표시되는 별 카운트가 1 증가 ✨
+
+> 💡 **HACS 다운로드 = 통합 설치**, **GitHub Star = 저장소 응원** — 서로 다른 작업입니다.
+> Star는 개발자에게 "잘 쓰고 있다"는 신호가 되어 다음 기능 개발에 큰 동기가 돼요.
+
+---
+
 ## 라이선스
 
 MIT License — [LICENSE](LICENSE)
 
 ---
 
-**도움이 되셨다면 GitHub 저장소에 ⭐ 한 번 부탁드립니다!**
+**문제가 생기거나 개선 아이디어 있으면 GitHub Issues로 알려주세요!**
