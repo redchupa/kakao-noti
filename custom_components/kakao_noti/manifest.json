@@ -1,7 +1,7 @@
 {
   "domain": "kakao_noti",
   "name": "Send to myself on KakaoTalk Notify",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "documentation": "https://github.com/redchupa/kakao-noti",
   "issue_tracker": "https://github.com/redchupa/kakao-noti/issues",
   "codeowners": ["@redchupa"],
