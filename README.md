@@ -675,10 +675,6 @@ A. HACS → 통합 → "Send to myself on KakaoTalk Notify" 카드에 새 버전
 이 통합이 잘 동작했다면 GitHub 저장소에 **별(Star)** 을 눌러주세요.
 별이 많을수록 GitHub 검색·HACS 카탈로그에서 위로 올라와 **다른 분들이 이 통합을 더 쉽게 발견** 할 수 있어요. 한국에서 카카오톡 알림이 필요한 누군가가 이걸 더 빨리 찾도록 도와주는 작은 행동입니다.
 
-> 💡 **HACS 다운로드 = 본인 HA에 통합 설치**
-> **GitHub Star = 다른 사람들도 찾을 수 있도록 추천**
-> 서로 다른 작업이에요. HACS 설치는 본인만의 일이고, Star는 한 번 눌러주시면 다음 사람에게 도움.
-
 ### 별 누르는 방법
 
 1. <https://github.com/redchupa/kakao-noti> 접속 (HACS에 등록한 그 저장소 URL과 동일)
