@@ -58,30 +58,49 @@ data:
 
 ## 🧭 시작 전 알아둘 것 (꼭 읽어주세요)
 
-| | |
+| 필요한 것 | 설명 |
 |---|---|
-| **Home Assistant** | 이 통합이 동작할 곳. 아직 없으시면 → ▶ **[Home Assistant 입문 가이드 (한국어, 블로그)](https://redchupa.com/entry/%ed%99%88%ec%96%b4%ec%8b%9c%ec%8a%a4%ed%84%b4%ed%8a%b8ha-%ec%9e%85%eb%ac%b8-%ea%b0%80%ec%9d%b4%eb%93%9c/)** ← 설치부터 첫 자동화까지 단계별 한국어 안내<br/>영문/공식: [HA 공식 설치 가이드](https://www.home-assistant.io/installation/) (Raspberry Pi / Docker / NUC 옵션별)<br/>버전 확인: **설정 → 정보** → **2024.4 이상** 필요 |
-| **HACS** (Home Assistant Community Store) | 커뮤니티 통합 설치 도구. 공식 설치 가이드: <https://www.hacs.xyz/docs/use/download/download/> |
-| **외부 HTTPS 주소** ⚠️ | 카카오가 로그인 결과를 HA로 보낼 때 필요. 아래 참고 |
+| **Home Assistant** | 이 통합이 동작할 곳. 아직 없으시면 → ▶ **[Home Assistant 입문 가이드 (한국어 블로그)](https://redchupa.com/entry/%ed%99%88%ec%96%b4%ec%8b%9c%ec%8a%a4%ed%84%b4%ed%8a%b8ha-%ec%9e%85%eb%ac%b8-%ea%b0%80%ec%9d%b4%eb%93%9c/)** ← 설치부터 첫 자동화까지 단계별 한국어 안내<br/>영문/공식: [HA 공식 설치 가이드](https://www.home-assistant.io/installation/)<br/>**버전 확인**: HA 좌측 사이드바(모바일은 좌상단 햄버거 ☰) → **설정** (Settings) → **정보** (About) → **2024.4 이상** 필요 |
+| **HACS** | 커뮤니티 통합을 쉽게 설치할 수 있게 해주는 "앱스토어" 같은 도구. 공식 설치 가이드: <https://www.hacs.xyz/docs/use/download/download/> |
+| **외부 HTTPS 주소** ⚠️ | 카카오가 로그인 결과를 HA로 보낼 때 필요. 아래에 자세히 설명 |
 | **본인 카카오 계정** | 메시지 받을 카카오톡 계정. 카카오 디벨로퍼스도 같은 계정으로 가입 |
+
+> 💡 **메뉴 이름이 영어**로 표시되는 분께: 본 가이드의 한국어 메뉴는 영어 UI에서 이렇게 보입니다.
+> 설정 = Settings · 기기 및 서비스 = Devices & Services · 자동화 = Automations · 개발자 도구 = Developer Tools · 동작 = Actions · 시스템 = System · 재시작 = Restart
 
 ### 외부 HTTPS 주소가 왜 필요한가요?
 
 카카오에서 "로그인 성공!" 결과를 다시 HA에게 알려주려면, **외부 인터넷에서 HA에 접속할 수 있는 https 주소**가 있어야 해요. 없으면 이 통합은 동작 안 합니다.
 
-가장 쉬운 옵션 순서:
+#### 본인이 외부 HTTPS 주소를 갖고 있는지 확인하는 법
+
+1. HA 좌측 사이드바 → **설정** → **시스템** → **네트워크** 클릭
+2. **"Home Assistant URL"** 섹션 보기
+3. **"인터넷 (External)"** 또는 **"외부"** URL이 `https://...` 로 채워져 있고 외부에서 그 URL이 열리면 ✅ — 다음 단계로
+4. 비어 있거나 `http://` 만 있거나 본인 LAN IP(`192.168.x.x`)면 ❌ — 아래 옵션 중 하나 선택
+
+#### 외부 HTTPS 주소 만드는 옵션
 
 | 방법 | 비용 | 난이도 | 추천 대상 |
 |---|---|---|---|
 | **Nabu Casa Cloud** | 월 $6.5 (≈ 9,000원) | ⭐ 매우 쉬움 | 처음 / 네트워크 어려움 |
-| **DuckDNS + Let's Encrypt** | 무료 | ⭐⭐⭐ 보통 | 네트워크 좀 다뤄봤음 |
+| **DuckDNS + Let's Encrypt 애드온** | 무료 | ⭐⭐⭐ 보통 | 네트워크 좀 다뤄봤음 |
 | **Cloudflare Tunnel** | 무료 | ⭐⭐⭐ 보통 | 도메인 직접 운영 |
 
-> 🌟 **처음이면 Nabu Casa Cloud**: HA → **설정 → Home Assistant Cloud** → 신청.
-> 즉시 `https://랜덤이름.ui.nabu.casa` 같은 외부 주소를 받습니다.
+#### Nabu Casa Cloud 가입 절차 (처음이면 가장 쉬운 옵션)
+
+1. HA 좌측 사이드바 → **설정** → **Home Assistant Cloud** (메뉴 없으면 **통합 추가** 에서 "Home Assistant Cloud" 검색 후 추가)
+2. **"Sign up"** 또는 **"가입"** 버튼 → 이메일·비밀번호 입력
+3. 가입 확인 메일이 도착하면 링크 클릭해 활성화
+4. HA로 돌아와 로그인 → **"Try free for 31 days"** (31일 무료 체험) 또는 결제 선택
+5. **"Remote control"** 토글 ON → 즉시 `https://랜덤문자열.ui.nabu.casa` 같은 외부 주소 발급
+6. 이 URL을 새 탭에 열어 본인 HA가 정상 로그인되면 OK ✅
 
 본인 HA 외부 주소를 메모해두세요. 3-2 단계에서 한 번 입력해야 합니다.
+
 예: `https://abc12345.ui.nabu.casa` / `https://my-home.duckdns.org`
+
+> ⚠️ **주의**: 본인이 외부 HTTPS 주소를 만들지 않은 상태에서 1·2단계를 진행해도 카카오 OAuth 마지막 단계에서 막힙니다. 반드시 위 확인부터 끝내세요.
 
 ---
 
@@ -110,7 +129,9 @@ data:
 
 ## 1-3. 플랫폼 키 페이지 — 한 곳에서 4가지 설정
 
-좌측 메뉴에서 **"앱 → 플랫폼 키"** 클릭. 그 안에 보이는 **"REST API 키"** 행에 마우스를 올리면 **편집 아이콘** (✏️) 이 나타납니다. 클릭하면 **"REST API 키 수정"** 페이지가 열려요.
+좌측 메뉴에서 **"앱 → 플랫폼 키"** 클릭. 그러면 **"REST API 키 수정"** 페이지가 열립니다 (또는 표에서 REST API 키 값을 클릭하면 이동).
+
+> 📍 페이지 제목이 **"REST API 키 수정"** 인지 확인. 다른 페이지면 좌측 메뉴 → **앱 → 플랫폼 키** 다시 클릭.
 
 > 🎯 **이 한 페이지에서 다음 4가지를 모두** 처리합니다:
 
@@ -251,13 +272,14 @@ HA 좌측 메뉴에 **HACS** 가 보이면 → 이미 설치됨, **2-2로 건너
 6. 동의 화면이 뜸:
    - **"카카오톡 메시지 전송"** 항목 **체크박스 ✅** 켜기 ⚠️ 빠뜨리면 발송 안 됨
    - **"동의하고 계속하기"** 클릭
-7. **"My Home Assistant"** 화면이 한 번 뜹니다:
+7. 이 시점에 처음 보는 화면이 한 번 뜰 거예요 — 흰 배경에 **"My Home Assistant"** 라는 제목 + 입력 칸 + Save 버튼:
+   - 화면 메시지: "You are seeing this page because you have been linked to a page in your Home Assistant instance but have not configured My Home Assistant."
    - 입력 칸에 **본인 HA의 외부 주소** 입력 (예: `https://abc12345.ui.nabu.casa` 또는 `https://my-home.duckdns.org`)
    - 끝에 `/` 나 `/auth/...` 같은 거 붙이지 마세요. 그냥 베이스 주소만.
    - **Save** 클릭
 8. 자동으로 본인 HA로 돌아옴 → 🎉 **"성공" 메시지 + 통합 등록 완료**
 
-> 💡 **7번의 "My Home Assistant" 화면**은 처음 한 번만 뜹니다. 이후엔 브라우저가 기억해서 자동.
+> 💡 **이 "My Home Assistant" 화면이 뭔가요?** Home Assistant Foundation이 운영하는 표준 redirector — 카카오 OAuth 결과를 본인 HA로 다시 전달해주는 안전한 중계지점입니다. 본인 HA 주소를 한 번만 등록하면 이후 브라우저가 기억해서 자동으로 처리해요.
 
 ---
 
@@ -300,15 +322,18 @@ data:
 
 ## 실전 사용 예시
 
+> ⚠️ **공통 안내**: 아래 예시의 `binary_sensor.front_door`, `sensor.living_room_temperature` 같은 entity ID는 **본인 환경의 실제 entity로 바꿔야** 동작합니다.
+> 본인 entity ID 확인: **개발자 도구 → 상태** (영문 Developer Tools → States) 에서 검색.
+
 ### 자동화 1: 현관문 열림 알림
 
-**설정 → 자동화 및 장면 → 자동화 추가** → "Use new automation" → 위 아이콘(⋮) → "YAML 모드로 편집" 후 붙여넣기:
+**설정 → 자동화 및 장면 → 자동화 추가** → "새 자동화 만들기" (Create new automation) → 우상단 ⋮ → **"YAML 모드로 편집"** (Edit in YAML) 후 붙여넣기:
 
 ```yaml
 alias: 현관문 열림 → 카톡 알림
 trigger:
   - platform: state
-    entity_id: binary_sensor.front_door
+    entity_id: binary_sensor.front_door   # ← 본인 환경의 문 센서로 변경
     to: "on"
 action:
   - service: notify.kakao_noti
@@ -329,8 +354,8 @@ action:
       title: "오전 브리핑"
       message: |
         🗓 {{ now().strftime('%Y-%m-%d') }}
-        🌡 거실 {{ states('sensor.living_room_temperature') }}°C
-        ☔ 강수확률 {{ states('sensor.rain_probability') }}%
+        🌡 거실 {{ states('sensor.living_room_temperature') }}°C   # ← 본인 온도 센서로 변경
+        ☔ 강수확률 {{ states('sensor.rain_probability') }}%      # ← 본인 강수확률 센서 또는 weather entity로 변경
 ```
 
 ### 자동화 3: HA 재시작 알림
@@ -416,24 +441,6 @@ action:
 mode: single
 ```
 
-### 호출 방법 2가지 (어느 쪽이든 OK)
-
-**방식 A — 텔레그램 스타일 (간단)**
-```yaml
-service: notify.kakao_noti
-data:
-  message: "..."
-```
-
-**방식 B — 엔티티 지정 방식 (멀티 계정 환경에서 유용)**
-```yaml
-service: notify.send_message
-target:
-  entity_id: notify.kakao_noti
-data:
-  message: "..."
-```
-
 ---
 
 ## 가족·여러 명에게 보내기 (멀티 계정)
@@ -477,11 +484,18 @@ data:
 
 #### A-2. 가족이 초대 수락
 
-1. 가족 카카오톡으로 **카카오 디벨로퍼스 초대 알림** 도착
-2. 알림 클릭 → 가족이 디벨로퍼스에 카카오 로그인 (처음이면 약관 동의)
-3. 초대 수락 → 본인 앱의 멤버 페이지에 가족이 **"활성"** 상태로 표시됨 ✅
+가족이 직접 해야 하는 절차:
 
-> 💡 가족 이메일을 모르겠으면: 가족이 본인 카카오톡 앱에서 **더보기 → 설정 → 개인/보안 → 카카오 계정** 확인.
+1. 가족 카카오톡으로 **카카오 디벨로퍼스 초대 알림** 도착 (안 오면 4번 직접 접속)
+2. 알림 클릭 → 디벨로퍼스 사이트 이동
+3. **가족 본인 카카오 계정으로 로그인**
+4. 알림이 안 왔으면 → 가족이 **<https://developers.kakao.com>** 직접 접속 → 우상단 로그인 → **내 애플리케이션** 클릭 → 초대받은 앱이 목록에 보이면 클릭
+5. 처음 사용이면 디벨로퍼스 이용 약관 동의
+6. 초대 수락 또는 자동 활성화 — 본인 앱의 **앱 → 멤버** 페이지에 가족이 **"활성"** 상태로 표시되면 ✅
+
+> 💡 **가족 이메일을 모르겠으면**: 가족이 본인 카카오톡 앱에서 **더보기 → 설정 → 개인/보안 → 카카오 계정** 확인.
+
+> ⚠️ **가족이 카카오 디벨로퍼스 가입을 거부하면** 이 방법은 사용 불가. **방법 B (가족 별도 앱)** 로 진행하거나, 가족에게 가입을 부탁해야 합니다 (디벨로퍼스 가입은 무료, 별도 정보 입력 거의 없음).
 
 #### A-3. HA에 두 번째 통합 추가 (시크릿 모드 필수)
 
@@ -585,6 +599,9 @@ action:
 | **"Unauthorized"** 류 | Client Secret 불일치 | 1-3 (3) "활성화" ON + 코드 정확히 복사했는지 |
 | **"카카오 알림이 이미 등록되어 있습니다"** | 같은 카카오 계정으로 또 등록 시도 | 멀티 계정 등록은 **반드시 시크릿/InPrivate 창**에서 가족 계정으로 로그인. [멀티 계정 섹션](#가족여러-명에게-보내기-멀티-계정) 참고 |
 | 동의 화면에 talk_message 항목이 **회색**으로 비활성 | 가족이 앱 멤버 등록 안 됨 | 1단계 카카오 콘솔 → **앱 → 멤버** → 가족 카카오 이메일 추가 (Viewer 권한 OK) → 가족이 디벨로퍼스 가입+초대 수락 |
+| HACS에서 **"Send to myself..."** 카드가 검색해도 안 보임 | 사용자 정의 저장소 등록 직후 캐시 | HACS 화면 새로고침 (F5) 또는 30초~1분 기다림. 그래도 없으면 저장소 URL 오타 확인 (`https://github.com/redchupa/kakao-noti`) |
+| Application Credentials의 **"통합"** 드롭다운에 항목이 없음 | HACS 다운로드 후 HA 재시작 안 함 | **설정 → 시스템 → 재시작** 한 번 더 |
+| 카카오 콘솔 메뉴가 가이드와 **다르게 보임** | 카카오가 UI를 종종 개편함 | 메뉴 이름이 약간 달라도 의미가 같으면 그쪽 클릭. 못 찾으면 GitHub Issues에 화면 캡처 첨부해서 문의 |
 
 ### My Home Assistant 페이지에서
 
