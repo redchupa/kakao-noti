@@ -24,6 +24,6 @@
     }
   },
   "application_credentials": {
-    "description": "HA가 카카오 '나에게 보내기' 메시지를 보낼 수 있도록 인증합니다.\n\n1. [카카오 디벨로퍼스]({more_info_url})에서 앱 생성\n2. **플랫폼 키 → REST API 키** 편집 페이지에서 클라이언트 시크릿(카카오 로그인) 생성 + 활성화 ON\n3. 같은 페이지에 Redirect URI 등록: `https://my.home-assistant.io/redirect/oauth`\n4. **제품 설정 → 카카오 로그인** 활성화 + **talk_message** 동의항목 사용함\n5. 아래에 REST API 키(client_id)와 클라이언트 시크릿을 입력하세요."
+    "description": "HA가 카카오 '나에게 보내기' 메시지를 보낼 수 있도록 인증합니다.\n\n1. [카카오 디벨로퍼스]({more_info_url})에서 앱 생성\n2. **플랫폼 키 → REST API 키** 편집 페이지에서 클라이언트 시크릿(카카오 로그인) 생성 + 활성화 ON\n3. 같은 페이지에 Redirect URI 등록: `{redirect_url}`\n4. **제품 설정 → 카카오 로그인** 활성화 + **talk_message** 동의항목 사용함\n5. 아래에 REST API 키(client_id)와 클라이언트 시크릿을 입력하세요."
   }
 }

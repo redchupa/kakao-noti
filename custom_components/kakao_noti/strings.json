@@ -24,6 +24,6 @@
     }
   },
   "application_credentials": {
-    "description": "Authorize Home Assistant to send Kakao 'self memo' messages.\n\n1. Register an app at [Kakao Developers]({more_info_url}).\n2. In **Platform Keys → REST API Key** edit page: generate a Client Secret (Kakao Login) and toggle Activated → ON.\n3. On the same page register Redirect URI: `https://my.home-assistant.io/redirect/oauth`\n4. In **Product → Kakao Login** turn it ON and enable the **talk_message** consent item.\n5. Paste the REST API Key (client_id) and the Client Secret below."
+    "description": "Authorize Home Assistant to send Kakao 'self memo' messages.\n\n1. Register an app at [Kakao Developers]({more_info_url}).\n2. In **Platform Keys → REST API Key** edit page: generate a Client Secret (Kakao Login) and toggle Activated → ON.\n3. On the same page register Redirect URI: `{redirect_url}`\n4. In **Product → Kakao Login** turn it ON and enable the **talk_message** consent item.\n5. Paste the REST API Key (client_id) and the Client Secret below."
   }
 }
