@@ -19,8 +19,5 @@ async def async_get_description_placeholders(hass: HomeAssistant) -> dict[str, s
     """Strings shown on the application credentials add-credentials UI."""
     return {
         "more_info_url": "https://developers.kakao.com",
-        "redirect_url": (
-            "Add this Redirect URI in Kakao Developers console:\n"
-            "<HA base URL>/auth/external/callback"
-        ),
+        "redirect_url": "https://my.home-assistant.io/redirect/oauth",
     }
