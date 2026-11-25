@@ -273,6 +273,12 @@ After install, restart HA. **HACS** should appear in the left menu.
 > 💬 HACS has both an **"official catalog"** and supports **"custom repositories"** that anyone can host.
 > This integration goes through the latter (custom repository).
 
+Click the button to open this repository in HACS on your own Home Assistant — no URL copy-paste needed.
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=redchupa&repository=kakao-noti&category=integration)
+
+If the button doesn't work, add it manually:
+
 1. Click **HACS** in the HA left menu
 2. Top right ⋮ (three dots) → **"Custom repositories"**
 3. Enter:

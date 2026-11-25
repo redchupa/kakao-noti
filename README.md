@@ -274,6 +274,12 @@ HA 좌측 메뉴에 **HACS** 가 보이면 → 이미 설치됨, **2-2로 건너
 > 💬 HACS는 **"공식 등록된 통합 카탈로그"** 도 있고, **"개인이 만든 통합"** 도 URL만 알면 가져올 수 있어요.
 > 이 통합은 후자 ("사용자 정의 저장소") 로 가져옵니다.
 
+아래 버튼을 누르면 내 Home Assistant의 HACS에서 이 저장소가 바로 열립니다. URL을 복사해 붙여넣을 필요가 없어요.
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=redchupa&repository=kakao-noti&category=integration)
+
+버튼이 동작하지 않으면 아래 방법으로 직접 등록하세요.
+
 1. HA 좌측 메뉴에서 **HACS** 클릭
 2. 우상단 ⋮ (점 세 개) → **"사용자 정의 저장소"** 클릭
 3. 입력 창에:
